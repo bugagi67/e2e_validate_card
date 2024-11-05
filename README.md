@@ -3,7 +3,7 @@
 
 [![Build status](https://ci.appveyor.com/api/projects/status/kqpfssi9ajeld1ct?svg=true)](https://ci.appveyor.com/project/bugagi67/e2e-validate-card)
 
-GH-Pages - 
+GH-Pages - https://bugagi67.github.io/e2e_validate_card/
 
 Credit Card Validator
 Легенда
