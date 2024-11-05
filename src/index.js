@@ -1,6 +1,11 @@
 import "./js/app";
-import '../src/css/style.css'
-import {detectCardType, disabledImage, activeImage, validateLuhn} from "./js/app";
+import "../src/css/style.css";
+import {
+  detectCardType,
+  disabledImage,
+  activeImage,
+  validateLuhn,
+} from "./js/app";
 
 const inputNumberCard = document.querySelector(".input_card_number");
 const imageCards = document.querySelectorAll(".card");
@@ -17,4 +22,4 @@ async function main() {
   });
 }
 
-main()
+main();
