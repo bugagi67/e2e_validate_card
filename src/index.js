@@ -1,5 +1,5 @@
 import "./js/app";
-import "../src/css/style.css";
+import "./css/style.css";
 import {
   detectCardType,
   disabledImage,

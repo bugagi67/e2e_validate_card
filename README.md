@@ -1,6 +1,8 @@
 
 # e2e
 
+[![Build status](https://ci.appveyor.com/api/projects/status/kqpfssi9ajeld1ct?svg=true)](https://ci.appveyor.com/project/bugagi67/e2e-validate-card)
+
 GH-Pages - 
 
 Credit Card Validator
