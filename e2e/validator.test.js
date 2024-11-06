@@ -1,13 +1,13 @@
 import puppeteer from "puppeteer";
 
-describe('Card Validation Tests', () => {
+describe("Card Validation Tests", () => {
   let browser;
   let page;
 
   beforeAll(async () => {
-    browser = await puppeteer.launch({ headless: false});
+    browser = await puppeteer.launch({ headless: false });
     page = await browser.newPage();
-    await page.goto('http://localhost:8080');
+    await page.goto("http://localhost:8080");
   });
 
   afterAll(async () => {
@@ -15,21 +15,23 @@ describe('Card Validation Tests', () => {
   });
 
   async function testCardNumber(cardNumber, expectedType) {
-    const inputSelector = '.input_card_number';
-    const buttonSelector = '.button_valid';
+    const inputSelector = ".input_card_number";
+    const buttonSelector = ".button_valid";
 
     // Ждем появления поля ввода и обнуляем значение
     await page.waitForSelector(inputSelector);
-    await page.$eval(inputSelector, el => el.value = '');
+    await page.$eval(inputSelector, (el) => (el.value = ""));
     await page.type(inputSelector, cardNumber);
     await page.click(buttonSelector);
 
-    await page.evaluate(() => new Promise(resolve => setTimeout(resolve, 500)))
+    await page.evaluate(
+      () => new Promise((resolve) => setTimeout(resolve, 500)),
+    );
 
-    const icons = await page.$$('.card');
+    const icons = await page.$$(".card");
     for (let icon of icons) {
-      const type = await icon.evaluate(el => el.className);
-      const opacity = await icon.evaluate(el => getComputedStyle(el).opacity);
+      const type = await icon.evaluate((el) => el.className);
+      const opacity = await icon.evaluate((el) => getComputedStyle(el).opacity);
 
       if (type.includes(expectedType)) {
         expect(opacity).toBe("1");
@@ -39,32 +41,31 @@ describe('Card Validation Tests', () => {
     }
   }
 
-  test('Visa card validation', async () => {
-    await testCardNumber('4929213933194051', 'visa');
+  test("Visa card validation", async () => {
+    await testCardNumber("4929213933194051", "visa");
   });
 
-  test('Master card validation', async () => {
-    await testCardNumber('5105105105105100', 'master');
+  test("Master card validation", async () => {
+    await testCardNumber("5105105105105100", "master");
   });
 
-  test('Amex card validation', async () => {
-    await testCardNumber('378282246310005', 'amex');
+  test("Amex card validation", async () => {
+    await testCardNumber("378282246310005", "amex");
   });
 
-  test('MIR card validation', async () => {
-    await testCardNumber('2201382000000013', 'mir');
+  test("MIR card validation", async () => {
+    await testCardNumber("2201382000000013", "mir");
   });
 
-  test('Discover card validation', async () => {
-    await testCardNumber('6011111111111117', 'discover');
+  test("Discover card validation", async () => {
+    await testCardNumber("6011111111111117", "discover");
   });
 
-  test('JCB card validation', async () => {
-    await testCardNumber('3530111333300000', 'jcb');
+  test("JCB card validation", async () => {
+    await testCardNumber("3530111333300000", "jcb");
   });
 
-  test('Diners_club card validation', async () => {
-    await testCardNumber('30569147814683', 'diners_club');
+  test("Diners_club card validation", async () => {
+    await testCardNumber("30569147814683", "diners_club");
   });
 });
-
