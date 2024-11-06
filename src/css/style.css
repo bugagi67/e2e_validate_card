@@ -36,34 +36,34 @@ body {
   height: 25px;
   background-position: 0 0;
   margin-right: 4px;
-}
-
-.visa {
-  background-image: url("https://www.validcreditcardnumber.com/static/img/card-visa.gif");
-}
-
-.master {
-  background-image: url("https://www.validcreditcardnumber.com/static/img/card-mastercard.gif");
-}
-
-.amex {
-  background-image: url("https://www.validcreditcardnumber.com/static/img/card-amex.gif");
-}
-.mir {
-  background-image: url("../images/mir.png");
   background-repeat: round;
 }
 
+.visa {
+  background-image: url("../images/visa.png");
+}
+
+.master {
+  background-image: url("../images/master.png");
+}
+
+.amex {
+  background-image: url("../images/amex.png");
+}
+.mir {
+  background-image: url("../images/mir.png");
+}
+
 .discover {
-  background-image: url("https://www.validcreditcardnumber.com/static/img/card-discover.gif");
+  background-image: url("../images/discover.png");
 }
 
 .jcb {
-  background-image: url("https://www.validcreditcardnumber.com/static/img/card-jcb.gif");
+  background-image: url("../images/jcb.png");
 }
 
 .diners_club {
-  background-image: url("https://www.validcreditcardnumber.com/static/img/card-diners.gif");
+  background-image: url("../images/diners.png");
 }
 
 .input-group {

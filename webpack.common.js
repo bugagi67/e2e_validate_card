@@ -6,6 +6,9 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     publicPath: "./",
   },
+  devServer: {
+    port: 8080,
+  },
   module: {
     rules: [
       {

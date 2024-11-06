@@ -35,7 +35,7 @@ describe("detectCardType", () => {
   });
 
   test('should return "mir" for valid MIR card numbers', () => {
-    expect(detectCardType("2200123456789010")).toBe("mir");
+    expect(detectCardType("2201382000000013")).toBe("mir");
   });
 
   test('should return "discover" for valid Discover card numbers', () => {

@@ -8,7 +8,9 @@
     "build": "webpack --config webpack.prod.js",
     "babel": "babel src -d dist",
     "lint": "eslint . --fix",
-    "clean": "rimraf dist .cache"
+    "clean": "rimraf dist .cache",
+    "e2e": "jest e2e --runInBand",
+    "allTest": "jest src --coverage && jest e2e --runInBand"
   },
   "author": "Dmitry Greshnov",
   "license": "ISC",
@@ -37,6 +39,7 @@
     "jest-environment-jsdom": "^29.7.0",
     "mini-css-extract-plugin": "^2.9.2",
     "prettier": "^3.3.3",
+    "puppeteer": "^23.7.0",
     "style-loader": "^4.0.0",
     "webpack": "^5.96.1",
     "webpack-cli": "^5.1.4",
