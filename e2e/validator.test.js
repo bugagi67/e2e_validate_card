@@ -5,7 +5,7 @@ describe("Card Validation Tests", () => {
   let page;
 
   beforeAll(async () => {
-    browser = await puppeteer.launch({ headless: false });
+    browser = await puppeteer.launch({ headless: true });
     page = await browser.newPage();
     await page.goto("http://localhost:8080");
   });
@@ -18,7 +18,6 @@ describe("Card Validation Tests", () => {
     const inputSelector = ".input_card_number";
     const buttonSelector = ".button_valid";
 
-    // Ждем появления поля ввода и обнуляем значение
     await page.waitForSelector(inputSelector);
     await page.$eval(inputSelector, (el) => (el.value = ""));
     await page.type(inputSelector, cardNumber);

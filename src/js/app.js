@@ -46,5 +46,8 @@ export function disabledImage(arrImage, type) {
 }
 
 export function activeImage(arrImage) {
-  arrImage.forEach((image) => (image.style.opacity = "1"));
+  arrImage.forEach((image) => {
+    image.style.opacity = "1";
+    image.dataset.valid = "valid";
+  });
 }
