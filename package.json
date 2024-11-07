@@ -10,7 +10,8 @@
     "lint": "eslint . --fix",
     "clean": "rimraf dist .cache",
     "e2e": "jest e2e --runInBand",
-    "allTest": "jest src --coverage && jest e2e --runInBand"
+    "allTest": "jest src --coverage && jest e2e --runInBand",
+    "startcicd": "http-server ./dist -p 9000"
   },
   "author": "Dmitry Greshnov",
   "license": "ISC",
