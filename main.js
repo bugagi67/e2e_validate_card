@@ -6362,7 +6362,8 @@ function disabledImage(arrImage, type) {
 }
 function activeImage(arrImage) {
   arrImage.forEach(function (image) {
-    return image.style.opacity = "1";
+    image.style.opacity = "1";
+    image.dataset.valid = "valid";
   });
 }
 // EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js
