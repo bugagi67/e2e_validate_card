@@ -7,7 +7,7 @@ describe("Card Validation Tests", () => {
   beforeAll(async () => {
     browser = await puppeteer.launch({ headless: true });
     page = await browser.newPage();
-    await page.goto("http://localhost:8080");
+    await page.goto("http://localhost:9000");
   });
 
   afterAll(async () => {
