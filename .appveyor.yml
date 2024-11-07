@@ -22,7 +22,7 @@ before_test:
   - yarn global add http-server
 
   # Запуск локального сервера на фоне
-  - http-server ./dist -p 9000 &
+  - yarn start_ci/cd &
 
   # Пауза для ожидания запуска сервера
   - sleep 5
